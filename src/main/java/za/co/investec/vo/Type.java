@@ -4,26 +4,26 @@ import java.io.Serializable;
 
 public class Type implements Serializable {
 
-	private String line1;
-	private String line2;
+	private String code;
+	private String name;
 	
-	public String getLine1() {
+	public String getCode() {
 		
-		return line1;
+		return code;
 	}
 	
-	public void setLine1(String line1) {
+	public void setCode(String code) {
 		
-		this.line1 = line1;
+		this.code = code;
 	}
 	
-	public String getLine2() {
+	public String getName() {
 		
-		return line2;
+		return name;
 	}
 	
-	public void setLine2(String line2) {
+	public void setName(String name) {
 		
-		this.line2 = line2;
-	}	
+		this.name = name;
+	}		
 }
