@@ -107,4 +107,16 @@ public class Address implements Serializable {
 		
 		this.lastUpdated = lastUpdated;
 	}	
+	
+	@Override
+	public String toString() { 
+		
+		return String.format("%s - %s - %s - %s – %s", 
+				             addressLineDetail.toString(),
+				             provinceOrState.toString(),
+				             cityOrTown,
+				             provinceOrState.toString(),
+				             postalCode,
+				             country.toString());
+	}
 }

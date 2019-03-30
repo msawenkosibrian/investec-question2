@@ -26,4 +26,10 @@ public class ProvinceOrState implements Serializable {
 		
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		
+		return "ProvinceOrState [code=" + code + ", name=" + name + "]";
+	}	
 }
