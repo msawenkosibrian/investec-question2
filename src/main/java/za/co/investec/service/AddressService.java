@@ -5,6 +5,7 @@ import java.util.Map;
 
 import za.co.investec.vo.Address;
 import za.co.investec.vo.AddressType;
+import za.co.investec.vo.Error;
 
 public interface AddressService {
 
@@ -12,5 +13,4 @@ public interface AddressService {
 	public List<String> prettyPrintAddress(List<Address> address);
 	public List<String> prettyPrintAddress(List<Address> address, AddressType type);
 	public List<Error> validateAddress(Address address);
-	public Map<Address, List<Error>> validateAddress(List<Address> address);
 }

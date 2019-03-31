@@ -4,32 +4,32 @@ import java.io.Serializable;
 
 public class AddressLineDetail implements Serializable {
 
-	private String code;
-	private String name;
+	private String line1;
+	private String line2;
 	
-	public String getCode() {
+	public String getLine1() {
 		
-		return code;
+		return line1;
 	}
 	
-	public void setCode(String code) {
+	public void setLine1(String line1) {
 		
-		this.code = code;
+		this.line1 = line1;
 	}
 	
-	public String getName() {
+	public String getLine2() {
 		
-		return name;
+		return line2;
 	}
 	
-	public void setName(String name) {
+	public void setLine2(String line2) {
 		
-		this.name = name;
+		this.line2 = line2;
 	}
 
 	@Override
 	public String toString() {
 		
-		return "AddressLineDetail [code=" + code + ", name=" + name + "]";
-	}		
+		return "AddressLineDetail [line1=" + line1 + ", line2=" + line2 + "]";
+	}	
 }
