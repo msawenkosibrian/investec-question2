@@ -24,18 +24,25 @@ public class AddressServiceImpl implements AddressService {
 	
 
 	public String prettyPrintAddress(Address address) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		assert (address != null);
+		return address.toString();
 	}
 
-	public List<String> prettyPrintAddress(List<Address> address) {
-		// TODO Auto-generated method stub
-		return null;
+	public void prettyPrintAddress(List<Address> addresses) {
+		
+		for (Address address: addresses) {
+			System.out.println(prettyPrintAddress(address));
+		}
 	}
 
-	public List<String> prettyPrintAddress(List<Address> address, AddressType type) {
-		// TODO Auto-generated method stub
-		return null;
+	public void prettyPrintAddress(List<Address> addresses, AddressType type) {
+		
+		for (Address address: addresses) {
+			if (address.getType().equals(type.getType())) {
+				System.out.println(prettyPrintAddress(address));
+			}
+		}
 	}
 
 	public List<Error> validateAddress(Address address) {
