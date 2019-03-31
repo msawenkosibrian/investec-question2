@@ -16,6 +16,6 @@ public final class NumberUtils {
 		catch (Exception e) {
 			return false;
 		}
-		return false;
+		return true;
 	}
 }

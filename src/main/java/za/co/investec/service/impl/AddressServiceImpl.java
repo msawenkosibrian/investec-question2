@@ -39,7 +39,7 @@ public class AddressServiceImpl implements AddressService {
 	public void prettyPrintAddress(List<Address> addresses, AddressType type) {
 		
 		for (Address address: addresses) {
-			if (address.getType().equals(type.getType())) {
+			if (address.getType().getName().equals(type.getType())) {
 				System.out.println(prettyPrintAddress(address));
 			}
 		}
@@ -50,12 +50,7 @@ public class AddressServiceImpl implements AddressService {
 		List<Error> errors = new ArrayList<Error>();
 		
 		// Postal code
-		if (StringUtils.isEmpty(address.getPostalCode())) {
-			Error error = new Error();
-			error.setMessage(ERROR_POSTAL_CODE);
-			errors.add(error);
-		}
-		else if (!NumberUtils.isNumeric(address.getPostalCode())) {
+		if (!NumberUtils.isNumeric(address.getPostalCode())) {
 			Error error = new Error();
 			error.setMessage(ERROR_INVALID_POSTAL_CODE);
 			errors.add(error);
@@ -77,7 +72,7 @@ public class AddressServiceImpl implements AddressService {
 			errors.add(error);
 		}
 		// Line Address
-		if (address.getAddressLineDetail() == null && StringUtils.isEmpty(address.getAddressLineDetail().getLine1()) && StringUtils.isEmpty(address.getAddressLineDetail().getLine1())) {
+		if (address.getAddressLineDetail() == null || StringUtils.isEmpty(address.getAddressLineDetail().getLine1()) && StringUtils.isEmpty(address.getAddressLineDetail().getLine1())) {
 			Error error = new Error();
 			error.setMessage(ERROR_INVALID_LINE_ADDRESS);
 			errors.add(error);

@@ -112,11 +112,11 @@ public class Address implements Serializable {
 	public String toString() { 
 		
 		return String.format("%s - %s - %s - %s – %s", 
-				             addressLineDetail.toString(),
-				             provinceOrState.toString(),
+				             (addressLineDetail != null)? addressLineDetail.toString(): "",
+				             (provinceOrState != null)? provinceOrState.toString(): "",
 				             cityOrTown,
-				             provinceOrState.toString(),
+				             (provinceOrState != null)? provinceOrState.toString(): "",
 				             postalCode,
-				             country.toString());
+				             (country != null)? country.toString(): "");
 	}
 }
